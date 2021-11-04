@@ -16,8 +16,7 @@ login_manager.login_view = 'auth.login'
 photos = UploadSet('photos', IMAGES)
 #send mail
 mail = Mail()
-#Marckdonw
-simple = SimpleMDE()
+
 
 
 from .main import main as main_blueprint
@@ -43,7 +42,7 @@ def create_app(config_name):
     db.init_app(app)#databse
     login_manager.init_app(app)#login helper
     mail.init_app(app)#mail
-    simple.init_app(app)#marckdown 
+    
 
 
     # configure UploadSet
