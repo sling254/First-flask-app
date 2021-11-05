@@ -7,8 +7,7 @@ from app.models import User,Role,Review
 app = create_app('development') 
 app = create_app('test')
 app = create_app('production')
-with app.app_context():
-    db.create_all()
+
 
 manager = Manager(app)
 manager.add_command('server',Server)
